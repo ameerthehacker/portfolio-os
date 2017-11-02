@@ -1,0 +1,19 @@
+.dock {
+    background: rgba(236,240,241, 0.7) !important;
+    position:absolute;
+    margin: 0 auto;    
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    width: 190px;
+    padding: 0px;
+    .dock-item {
+        img {
+            display: inherit;
+        }
+        display: inline-block;
+    }
+}
+.tiny {
+    width: 60px !important;
+}
