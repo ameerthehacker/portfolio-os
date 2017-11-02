@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Important to avoid error in webpack compilation
+$icons-font-path: "../node_modules/semantic-ui-sass/icons" !default;
+@import "../node_modules/semantic-ui-sass/semantic-ui.scss";
+
+// Important to avoid error in webpack compilation
+$fa-font-path: "../node_modules/font-awesome/fonts" !default;
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
