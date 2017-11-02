@@ -7,3 +7,15 @@ $icons-font-path: "../node_modules/semantic-ui-sass/icons" !default;
 // Important to avoid error in webpack compilation
 $fa-font-path: "../node_modules/font-awesome/fonts" !default;
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
