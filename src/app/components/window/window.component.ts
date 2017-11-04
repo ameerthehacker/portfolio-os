@@ -15,6 +15,7 @@ declare var $: any;
 export class WindowComponent implements OnInit, AfterViewChecked {
 
   windowTitle: string;
+  windowType: string;
 
   constructor(private windowService: WindowService, private router: Router) { }
 
@@ -23,6 +24,7 @@ export class WindowComponent implements OnInit, AfterViewChecked {
   ngAfterViewChecked() {
     this.windowService.showWindowEvent.subscribe((window: Window) => {
       this.windowTitle = window.title;
+      this.windowType = window.type;
       this.router.navigate(window.route);
       $('.ui.modal').modal('show');
     });

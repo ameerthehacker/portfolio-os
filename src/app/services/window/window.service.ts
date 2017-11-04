@@ -9,8 +9,8 @@ export class WindowService {
 
   constructor() { }
 
-  showWindow(title: string, route: Array<string>) {
-    const window: Window = { title: title, route: route };
+  showWindow(title: string, route: Array<string>, type: string = '') {
+    const window: Window = { title: title, route: route, type: type };
     this.showWindowEvent.emit(window);
   }
   closeWindow() {

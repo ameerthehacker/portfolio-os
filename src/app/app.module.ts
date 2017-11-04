@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { WindowService } from './services/window/window.service';
 
@@ -13,6 +14,7 @@ import { DockComponent } from './components/dock/dock.component';
 import { WindowComponent } from './components/window/window.component';
 import { TitlebarComponent } from './components/window/titlebar/titlebar.component';
 import { FinderComponent } from './components/apps/finder/finder.component';
+import { MailComponent } from './components/apps/mail/mail.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,14 @@ import { FinderComponent } from './components/apps/finder/finder.component';
     DockComponent,
     WindowComponent,
     TitlebarComponent,
-    FinderComponent
+    FinderComponent,
+    MailComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(APP_ROUTES)
+    RouterModule.forRoot(APP_ROUTES),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     WindowService

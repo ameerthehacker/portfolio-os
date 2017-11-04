@@ -16,13 +16,13 @@
     .fa {
       position: relative;
       bottom: 4px;
-      left: 2px;
+      left: 3px;
       font-size: 9px;
       color: #323232;
       visibility: hidden;
     }
   }
-  .window-action-icon:hover {
+  .window-action:hover {
     .fa {
       visibility: visible;
     }

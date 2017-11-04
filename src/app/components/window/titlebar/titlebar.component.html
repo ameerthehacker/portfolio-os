@@ -1,14 +1,16 @@
 <div class="ui segment titlebar clearfix">
   <div class="pull-left">
-    <span class="window-action-icon bg-ligt-red" (click)="windowService.closeWindow()">
-      <i class="fa fa-times"></i>
-    </span>
-    <span class="window-action-icon bg-light-yellow">
-      <i class="fa fa-minus"></i>
-    </span>
-    <span class="window-action-icon bg-light-green">
-      <i class="fa fa-expand"></i>
-    </span>
+    <div class="window-action">
+      <span class="window-action-icon bg-ligt-red" (click)="windowService.closeWindow()">
+        <i class="fa fa-times"></i>
+      </span>
+      <span class="window-action-icon bg-light-yellow">
+        <i class="fa fa-minus"></i>
+      </span>
+      <span class="window-action-icon bg-light-green">
+        <i class="fa fa-expand"></i>
+      </span>
+    </div>
     <div class="ui horizontal segments navigation">
       <div class="ui segment text-center">
         <i class="fa fa-angle-left"></i>
