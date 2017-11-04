@@ -22,7 +22,10 @@
         "styles.scss"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js"
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/semantic-ui-sass/js/transition.js",
+        "../node_modules/semantic-ui-sass/js/dimmer.js",
+        "../node_modules/semantic-ui-sass/js/modal.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -56,7 +59,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

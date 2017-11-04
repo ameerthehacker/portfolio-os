@@ -1,22 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router'
+
+import { WindowService } from './services/window/window.service';
+
+import { APP_ROUTES } from './routes/app.route';
 
 import { AppComponent } from './app.component';
-import { DesktopComponent } from './desktop/desktop.component';
-import { TaskbarComponent } from './taskbar/taskbar.component';
-import { DockComponent } from './dock/dock.component';
+import { DesktopComponent } from './components/desktop/desktop.component';
+import { TaskbarComponent } from './components/taskbar/taskbar.component';
+import { DockComponent } from './components/dock/dock.component';
+import { WindowComponent } from './components/window/window.component';
+import { TitlebarComponent } from './components/window/titlebar/titlebar.component';
+import { FinderComponent } from './components/apps/finder/finder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DesktopComponent,
     TaskbarComponent,
-    DockComponent
+    DockComponent,
+    WindowComponent,
+    TitlebarComponent,
+    FinderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [],
+  providers: [
+    WindowService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

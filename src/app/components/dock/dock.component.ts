@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { WindowService } from '../../services/window/window.service';
+
 @Component({
   selector: 'os-dock',
   templateUrl: './dock.component.html',
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DockComponent implements OnInit {
 
-  constructor() { }
+  constructor(private windowService: WindowService) { }
 
   ngOnInit() {
   }
-
+  
 }

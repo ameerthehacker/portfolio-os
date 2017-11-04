@@ -1,0 +1,48 @@
+.titlebar {
+  padding: 5px !important;
+  background: rgba(236,240,241, 0.7) !important;
+  border-top-right-radius: 5px !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-right-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  opacity: 0.8;
+
+  .window-action-icon {
+    border-radius: 100%;
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+
+    .fa {
+      position: relative;
+      bottom: 4px;
+      left: 2px;
+      font-size: 9px;
+      color: #323232;
+      visibility: hidden;
+    }
+  }
+  .window-action-icon:hover {
+    .fa {
+      visibility: visible;
+    }
+  }
+
+  .navigation {
+    .ui.segment {
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      padding-top: 4px !important;
+      padding-bottom: 4px !important;
+
+      .fa {
+        color: #95a5a6;
+      }
+    }
+  }
+
+  .search-bar {
+    height: 10px !important;
+    margin-top: 30px;
+  }
+}
