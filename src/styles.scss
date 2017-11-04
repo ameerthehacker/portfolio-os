@@ -8,6 +8,9 @@ $icons-font-path: "../node_modules/semantic-ui-sass/icons" !default;
 $fa-font-path: "../node_modules/font-awesome/fonts" !default;
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
 
+.ui.segment {
+  padding: 0px;
+}
 .pull-left {
     float: left;
 }
