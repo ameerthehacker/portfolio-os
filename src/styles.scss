@@ -43,5 +43,6 @@ $fa-font-path: "../node_modules/font-awesome/fonts" !default;
 .ui.modal {
   .content {
     height: 350px !important;
+    padding: 0px !important;
   }
 }
