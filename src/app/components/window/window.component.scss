@@ -1,4 +1,8 @@
 .ui.modal {
   background: rgba(255, 255, 255, 0.5) !important;
   border-radius: 5px !important;
+
+  .content {
+    padding: 0px;
+  }
 }

@@ -1,39 +1,41 @@
-<form class="ui form" [formGroup]="mailForm">
-  <div class="inline fields">
-    <div class="one wide field">
-      <label for="to">To:</label>
-    </div>
-    <div class="fifteen wide field">
-      <div class="ui transparent input">
-        <input id="to" type="text" value="ameerjhanprof@gmail.com" disabled>
+<div class="div padding-10">
+  <form class="ui form" [formGroup]="mailForm">
+    <div class="inline fields">
+      <div class="one wide field">
+        <label for="to">To:</label>
+      </div>
+      <div class="fifteen wide field">
+        <div class="ui transparent input">
+          <input id="to" type="text" value="ameerjhanprof@gmail.com" disabled>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="inline fields">
-    <div class="two wide field">
-      <label for="from">From:</label>
-    </div>
-    <div class="fourteen wide field">
-      <div class="ui transparent input">
-        <input id="from" formControlName="from" type="text" autofocus>
+    <div class="inline fields">
+      <div class="two wide field">
+        <label for="from">From:</label>
+      </div>
+      <div class="fourteen wide field">
+        <div class="ui transparent input">
+          <input id="from" formControlName="from" type="text" autofocus>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="inline fields">
-    <div class="two wide field">
-      <label for="subject">Subject:</label>
-    </div>
-    <div class="fourteen wide field">
-      <div class="ui transparent input">
-        <input id="subject" formControlName="subject" type="text">
+    <div class="inline fields">
+      <div class="two wide field">
+        <label for="subject">Subject:</label>
+      </div>
+      <div class="fourteen wide field">
+        <div class="ui transparent input">
+          <input id="subject" formControlName="subject" type="text">
+        </div>
       </div>
     </div>
-  </div>
-  <div class="field">
-    <label for="message">Message:</label>
-    <textarea id="message" formControlName="message" rows="3"></textarea>
-  </div>
-  <div class="field">
-    <button type="submit" class="ui small button primary" [disabled]="mailForm.invalid">Send</button>
-  </div>
-</form>
+    <div class="field">
+      <label for="message">Message:</label>
+      <textarea id="message" formControlName="message" rows="3"></textarea>
+    </div>
+    <div class="field">
+      <button type="submit" class="ui small button primary" [disabled]="mailForm.invalid">Send</button>
+    </div>
+  </form>
+</div>

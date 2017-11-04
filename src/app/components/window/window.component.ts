@@ -33,8 +33,4 @@ export class WindowComponent implements OnInit, AfterViewChecked {
     });
   }
 
-  public createWindow() {
-    $('.ui.fullscreen.modal').modal('show');
-  }
-
 }

@@ -15,6 +15,7 @@ import { WindowComponent } from './components/window/window.component';
 import { TitlebarComponent } from './components/window/titlebar/titlebar.component';
 import { FinderComponent } from './components/apps/finder/finder.component';
 import { MailComponent } from './components/apps/mail/mail.component';
+import { SafariComponent } from './components/apps/safari/safari.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MailComponent } from './components/apps/mail/mail.component';
     WindowComponent,
     TitlebarComponent,
     FinderComponent,
-    MailComponent
+    MailComponent,
+    SafariComponent
   ],
   imports: [
     BrowserModule,
