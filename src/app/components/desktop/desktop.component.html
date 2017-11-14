@@ -8,7 +8,7 @@
         <div class="row">
             <div class="sixteen wide column">
                 <os-icon icon="assets/images/icons/trash-icon.png" color="white" label="Trash" (dblClick)="windowService.showWindow('Finder', ['/trash'])"></os-icon>
-                <os-icon icon="assets/images/icons/txt-icon.png" color="white" label="readme.txt"></os-icon>
+                <os-icon icon="assets/images/icons/txt-icon.png" color="white" label="readme.txt" (dblClick)="windowService.showWindow('readme.txt', [], '', 'markdown', false, false)"></os-icon>
             </div>
         </div>
     </div>

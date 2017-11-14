@@ -1,6 +1,13 @@
-<div class="ui {{ windowType }} modal">
-  <os-titlebar [title]="windowTitle" (close)="windowService.closeWindow()"></os-titlebar>
+<div class="ui {{ systemWindow.type }} system modal">
+  <os-titlebar [search]="systemWindow.search" [navigation]="systemWindow.navigation" [title]="systemWindow.title" (close)="windowService.closeWindow(systemWindow)"></os-titlebar>
   <div class="content">
     <router-outlet></router-outlet>
   </div>
 </div>
+<div class="ui {{ markdownWindow.type }} markdown modal">
+    <os-titlebar [search]="systemWindow.search" [navigation]="systemWindow.navigation" [title]="markdownWindow.title" (close)="windowService.closeWindow(markdownWindow)"></os-titlebar>
+    <div class="content">
+    </div>
+</div>
+
+  

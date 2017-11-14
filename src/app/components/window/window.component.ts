@@ -1,4 +1,8 @@
-import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import { 
+  Component, 
+  OnInit, 
+  AfterViewChecked
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 import { WindowService } from '../../services/window/window.service';
@@ -14,8 +18,8 @@ declare var $: any;
 })
 export class WindowComponent implements OnInit, AfterViewChecked {
 
-  windowTitle: string;
-  windowType: string;
+  systemWindow: Window = new Window();
+  markdownWindow: Window = new Window();
 
   constructor(private windowService: WindowService, private router: Router) { }
 
@@ -23,14 +27,18 @@ export class WindowComponent implements OnInit, AfterViewChecked {
   }
   ngAfterViewChecked() {
     this.windowService.showWindowEvent.subscribe((window: Window) => {
-      this.windowTitle = window.title;
-      this.windowType = window.type;
+      if(window.context == 'system') {
+        this.systemWindow = window;
+      }
+      else if(window.context == 'markdown') {
+        this.markdownWindow = window;        
+      }
       this.router.navigate(window.route);
-      $('.ui.modal').modal('show');
+      $(`.ui.${window.context}.modal`).modal({ allowMultiple: true }).modal('show');      
     });
-    this.windowService.closeWindowEvent.subscribe(() => {
-      $('.ui.modal').modal('hide');
-    });
+    this.windowService.closeWindowEvent.subscribe((window: Window) => {
+      $(`.ui.${window.context}.modal`).modal('hide');
+    });    
   }
 
 }

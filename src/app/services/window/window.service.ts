@@ -5,16 +5,16 @@ import { Window } from '../../models/window';
 export class WindowService {
 
   showWindowEvent: EventEmitter<Window> = new EventEmitter<Window>();
-  closeWindowEvent: EventEmitter<any> = new EventEmitter<any>();
+  closeWindowEvent: EventEmitter<Window> = new EventEmitter<Window>();
 
   constructor() { }
 
-  showWindow(title: string, route: Array<string>, type: string = '') {
-    const window: Window = { title: title, route: route, type: type };
+  showWindow(title: string, route: Array<string>, type: string = '', context: string = 'system', search: boolean = true, navigation: boolean = true) {
+    const window: Window = { title: title, route: route, type: type, context: context, search: search, navigation: navigation };
     this.showWindowEvent.emit(window);
   }
-  closeWindow() {
-    this.closeWindowEvent.emit();
+  closeWindow(window: Window) {
+    this.closeWindowEvent.emit(window);
   }
 
 }
