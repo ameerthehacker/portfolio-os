@@ -1,5 +1,5 @@
 <div class="ui {{ windowType }} modal">
-  <os-titlebar [title]="windowTitle"></os-titlebar>
+  <os-titlebar [title]="windowTitle" (close)="windowService.closeWindow()"></os-titlebar>
   <div class="content">
     <router-outlet></router-outlet>
   </div>

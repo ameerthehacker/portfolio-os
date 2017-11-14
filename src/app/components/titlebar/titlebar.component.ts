@@ -1,4 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { 
+  Component, 
+  OnInit, 
+  Input, 
+  Output,
+  EventEmitter
+} from '@angular/core';
 
 import { WindowService } from '../../services/window/window.service';
 
@@ -11,10 +17,20 @@ export class TitlebarComponent implements OnInit {
 
   @Input()
   title: string;
+  @Input('search')
+  searchVisible: boolean = true;
+  @Input('navigation')
+  navigationVisible: boolean = true;
+  @Output('close')
+  closeClicked: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(private windowService: WindowService) { }
 
   ngOnInit() {
+  }
+
+  onCloseClicked() {
+    this.closeClicked.emit();
   }
 
 }
