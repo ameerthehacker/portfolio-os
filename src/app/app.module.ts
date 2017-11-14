@@ -12,7 +12,7 @@ import { DesktopComponent } from './components/desktop/desktop.component';
 import { TaskbarComponent } from './components/taskbar/taskbar.component';
 import { DockComponent } from './components/dock/dock.component';
 import { WindowComponent } from './components/window/window.component';
-import { TitlebarComponent } from './components/window/titlebar/titlebar.component';
+import { TitlebarComponent } from './components/titlebar/titlebar.component';
 import { FinderComponent } from './components/apps/finder/finder.component';
 import { MailComponent } from './components/apps/mail/mail.component';
 import { SafariComponent } from './components/apps/safari/safari.component';

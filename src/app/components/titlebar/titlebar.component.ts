@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { WindowService } from '../../../services/window/window.service';
+import { WindowService } from '../../services/window/window.service';
 
 @Component({
   selector: 'os-titlebar',
