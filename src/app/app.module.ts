@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MarkdownModule } from 'angular2-markdown';
 
 import { WindowService } from './services/window/window.service';
 
@@ -37,7 +38,8 @@ import { TrashComponent } from './components/apps/trash/trash.component';
     BrowserModule,
     RouterModule.forRoot(APP_ROUTES),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MarkdownModule
   ],
   providers: [
     WindowService

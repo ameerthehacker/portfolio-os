@@ -44,5 +44,6 @@ $fa-font-path: "../node_modules/font-awesome/fonts" !default;
   .content {
     height: 350px !important;
     padding: 0px !important;
+    overflow: auto !important;
   }
 }

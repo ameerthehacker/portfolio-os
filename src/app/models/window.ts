@@ -5,4 +5,5 @@ export class Window {
   public context: string;
   public search: boolean;
   public navigation: boolean;
+  public markdownPath: string;
 }

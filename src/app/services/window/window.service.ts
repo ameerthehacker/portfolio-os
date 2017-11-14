@@ -9,8 +9,8 @@ export class WindowService {
 
   constructor() { }
 
-  showWindow(title: string, route: Array<string>, type: string = '', context: string = 'system', search: boolean = true, navigation: boolean = true) {
-    const window: Window = { title: title, route: route, type: type, context: context, search: search, navigation: navigation };
+  showWindow(title: string, route: Array<string>, type: string = '', context: string = 'system', markdownPath: string = '', search: boolean = true, navigation: boolean = true) {
+    const window: Window = { title: title, route: route, type: type, context: context, markdownPath: markdownPath, search: search, navigation: navigation };
     this.showWindowEvent.emit(window);
   }
   closeWindow(window: Window) {
