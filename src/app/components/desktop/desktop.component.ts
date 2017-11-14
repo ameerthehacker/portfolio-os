@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowService } from '../../services/window/window.service';
 
 @Component({
   selector: 'os-desktop',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesktopComponent implements OnInit {
 
-  constructor() { }
+  constructor(private windowService: WindowService) { }
 
   ngOnInit() {
   }

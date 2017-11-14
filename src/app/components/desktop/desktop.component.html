@@ -6,8 +6,8 @@
 <div class="desktop-icons pull-right">
     <div class="ui grid">
         <div class="row">
-            <div class="column sixteen wide">
-                <os-icon icon="assets/images/icons/trash-icon.png" color="white" label="Trash"></os-icon>
+            <div class="sixteen wide column">
+                <os-icon icon="assets/images/icons/trash-icon.png" color="white" label="Trash" (dblClick)="windowService.showWindow('Finder', ['/trash'])"></os-icon>
                 <os-icon icon="assets/images/icons/txt-icon.png" color="white" label="readme.txt"></os-icon>
             </div>
         </div>
