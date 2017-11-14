@@ -5,7 +5,7 @@
   </div>
 </div>
 <div class="ui {{ markdownWindow.type }} markdown modal">
-    <os-titlebar [search]="systemWindow.search" [navigation]="systemWindow.navigation" [title]="markdownWindow.title" (close)="windowService.closeWindow(markdownWindow)"></os-titlebar>
+    <os-titlebar [search]="markdownWindow.search" [navigation]="markdownWindow.navigation" [title]="markdownWindow.title" (close)="windowService.closeWindow(markdownWindow)"></os-titlebar>
     <div class="content">
       <div class="padding-10">
         <markdown [path]="markdownWindow.markdownPath"></markdown>
