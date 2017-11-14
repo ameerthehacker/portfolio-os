@@ -773,7 +773,7 @@ var _a, _b;
 /***/ "../../../../../src/app/components/window/window.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"ui {{ systemWindow.type }} system modal\">\n  <os-titlebar [search]=\"systemWindow.search\" [navigation]=\"systemWindow.navigation\" [title]=\"systemWindow.title\" (close)=\"windowService.closeWindow(systemWindow)\"></os-titlebar>\n  <div class=\"content\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n<div class=\"ui {{ markdownWindow.type }} markdown modal\">\n    <os-titlebar [search]=\"systemWindow.search\" [navigation]=\"systemWindow.navigation\" [title]=\"markdownWindow.title\" (close)=\"windowService.closeWindow(markdownWindow)\"></os-titlebar>\n    <div class=\"content\">\n      <div class=\"padding-10\">\n        <markdown [path]=\"markdownWindow.markdownPath\"></markdown>\n      </div>\n    </div>\n</div>\n\n  \n"
+module.exports = "<div class=\"ui {{ systemWindow.type }} system modal\">\n  <os-titlebar [search]=\"systemWindow.search\" [navigation]=\"systemWindow.navigation\" [title]=\"systemWindow.title\" (close)=\"windowService.closeWindow(systemWindow)\"></os-titlebar>\n  <div class=\"content\">\n    <router-outlet></router-outlet>\n  </div>\n</div>\n<div class=\"ui {{ markdownWindow.type }} markdown modal\">\n    <os-titlebar [search]=\"markdownWindow.search\" [navigation]=\"markdownWindow.navigation\" [title]=\"markdownWindow.title\" (close)=\"windowService.closeWindow(markdownWindow)\"></os-titlebar>\n    <div class=\"content\">\n      <div class=\"padding-10\">\n        <markdown [path]=\"markdownWindow.markdownPath\"></markdown>\n      </div>\n    </div>\n</div>\n\n  \n"
 
 /***/ }),
 
