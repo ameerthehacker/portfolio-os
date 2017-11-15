@@ -698,7 +698,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".titlebar {\n  padding: 5px !important;\n  background: rgba(236, 240, 241, 0.7) !important;\n  border-top-right-radius: 5px !important;\n  border-top-left-radius: 5px !important;\n  border-bottom-right-radius: 0px !important;\n  border-bottom-left-radius: 0px !important;\n  opacity: 0.8; }\n  .titlebar .window-action-icon {\n    border-radius: 100%;\n    height: 12px;\n    width: 12px;\n    display: inline-block; }\n    .titlebar .window-action-icon .fa {\n      position: relative;\n      bottom: 4px;\n      left: 3px;\n      font-size: 9px;\n      color: #323232;\n      visibility: hidden; }\n  .titlebar .window-action:hover .fa {\n    visibility: visible; }\n  .titlebar .navigation .ui.segment {\n    padding-left: 10px !important;\n    padding-right: 10px !important;\n    padding-top: 4px !important;\n    padding-bottom: 4px !important; }\n    .titlebar .navigation .ui.segment .fa {\n      color: #95a5a6; }\n  .titlebar .search-bar {\n    height: 10px !important;\n    margin-top: 30px; }\n", ""]);
+exports.push([module.i, ".titlebar {\n  padding: 5px !important;\n  background: rgba(236, 240, 241, 0.8) !important;\n  border-top-right-radius: 5px !important;\n  border-top-left-radius: 5px !important;\n  border-bottom-right-radius: 0px !important;\n  border-bottom-left-radius: 0px !important; }\n  .titlebar .window-action-icon {\n    border-radius: 100%;\n    height: 12px;\n    width: 12px;\n    display: inline-block; }\n    .titlebar .window-action-icon .fa {\n      position: relative;\n      bottom: 4px;\n      left: 3px;\n      font-size: 9px;\n      color: #323232;\n      visibility: hidden; }\n  .titlebar .window-action:hover .fa {\n    visibility: visible; }\n  .titlebar .navigation .ui.segment {\n    padding-left: 10px !important;\n    padding-right: 10px !important;\n    padding-top: 4px !important;\n    padding-bottom: 4px !important; }\n    .titlebar .navigation .ui.segment .fa {\n      color: #95a5a6; }\n  .titlebar .search-bar {\n    height: 10px !important;\n    margin-top: 30px; }\n", ""]);
 
 // exports
 
@@ -836,7 +836,12 @@ var WindowComponent = (function () {
                 _this.markdownWindow = window;
             }
             _this.router.navigate(window.route);
-            $(".ui." + window.context + ".modal").modal({ allowMultiple: true }).modal('show');
+            $(".ui." + window.context + ".modal")
+                .modal({
+                allowMultiple: true,
+                dimmerSettings: { opacity: 0 }
+            })
+                .modal('show');
         });
         this.windowService.closeWindowEvent.subscribe(function (window) {
             $(".ui." + window.context + ".modal").modal('hide');
@@ -1009,6 +1014,18 @@ module.exports = __webpack_require__.p + "yosemite.7769f86771389d70fdb2.jpg";
 
 /***/ }),
 
+/***/ "../../../../../src/environments/environment.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+var environment = {
+    production: true
+};
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
 /***/ "../../../../../src/main.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1017,10 +1034,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
 
 
 
-if (true) {
+
+if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
