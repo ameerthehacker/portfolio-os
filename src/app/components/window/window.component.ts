@@ -34,7 +34,12 @@ export class WindowComponent implements OnInit, AfterViewChecked {
         this.markdownWindow = window;        
       }
       this.router.navigate(window.route);
-      $(`.ui.${window.context}.modal`).modal({ allowMultiple: true }).modal('show');      
+      $(`.ui.${window.context}.modal`)
+      .modal({
+         allowMultiple: true,
+         dimmerSettings: { opacity: 0 }
+      })
+      .modal('show');      
     });
     this.windowService.closeWindowEvent.subscribe((window: Window) => {
       $(`.ui.${window.context}.modal`).modal('hide');

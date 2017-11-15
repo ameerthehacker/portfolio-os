@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ngh": "ng build --base-href 'https://ameerthehacker.github.io/portfolio-os/' && ngh"
+    "ngh": "ng build --env=prod --base-href 'https://ameerthehacker.github.io/portfolio-os/' && ngh"
   },
   "private": true,
   "dependencies": {
