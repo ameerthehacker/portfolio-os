@@ -42,9 +42,25 @@ $fa-font-path: "../node_modules/font-awesome/fonts" !default;
 }
 .ui.modal {
   .content {
-    height: 350px !important;
+    height: 75vh !important;
     padding: 0px !important;
     overflow-y: auto !important;
     overflow-x: hidden !important;    
+  }
+}
+
+markdown {
+
+  code {
+    background: #F6F8FA;
+    padding: 10px;
+    display: block;
+    border-radius: 3px; 
+  }
+  
+  img {
+    @extend .ui.image;
+    padding: 2px;
+    box-shadow: 3px 3px 3px 3px #888888;
   }
 }

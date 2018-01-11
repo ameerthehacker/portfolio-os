@@ -1,8 +1,10 @@
 export const PROJECTS = {
-    'legacy': {
-        label: 'Legacy'
+    'letschat': {
+        label: 'Letschat',
+        md: 'assets/mds/projects/letschat.md'
     },
-    'portfolio-os': {
-        label: 'Portfolio OS'
+    'legacy': {
+        label: 'Legacy CMS',
+        md: 'assets/mds/projects/legacy.md'
     }
 }

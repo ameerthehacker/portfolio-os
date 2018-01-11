@@ -1,7 +1,7 @@
 <div class="padding-10">
   <div class="ui grid">
-      <div *ngFor="let projectLabel of projectLabels" class="two wide column">
-          <os-icon icon="assets/images/icons/docx-icon.png" [label]="projectLabel" (dblClick)="windowService.showWindow('readme.txt', [], 'large', 'markdown', 'assets/mds/readme.md', false, false)"></os-icon>
+      <div *ngFor="let project of projects" class="two wide column">
+          <os-icon icon="assets/images/icons/docx-icon.png" [label]="project.label" (dblClick)="windowService.showWindow(project.label, [], 'fullscreen', 'markdown', project.md, false, false)"></os-icon>
       </div>
   </div>   
 </div>

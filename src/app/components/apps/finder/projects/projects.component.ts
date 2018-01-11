@@ -11,16 +11,16 @@ import { WindowService } from '../../../../services/window/window.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  projectLabels: string[];
+  projects: string[];
 
   constructor(private windowService: WindowService) { }
 
   ngOnInit() {
-    this.projectLabels = [];
+    this.projects = [];
 
     Object.keys(PROJECTS)
     .forEach((project) => {
-      this.projectLabels.push(PROJECTS[project].label);
+      this.projects.push(PROJECTS[project]);
     });
   }
 
