@@ -21,25 +21,25 @@ It is a __MEAN__ stack application
 
 ## Currently supports upto __17__ different languages ##
 
-    * C
-    * C++11
-    * C++14
-    * C++17
-    * Elixir
-    * Go
-    * Groovy
-    * Haskell
-    * Java (Open JDK)
-    * JavaScript (Node.js)
-    * PHP
-    * Perl
-    * Python 2
-    * Python 3
-    * Ruby
-    * Rust
-    * SHELL
-    * Scala
-    * Swift
+* C
+* C++11
+* C++14
+* C++17
+* Elixir
+* Go
+* Groovy
+* Haskell
+* Java (Open JDK)
+* JavaScript (Node.js)
+* PHP
+* Perl
+* Python 2
+* Python 3
+* Ruby
+* Rust
+* SHELL
+* Scala
+* Swift
 
 ## Full fledged code editor ##
 
