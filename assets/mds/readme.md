@@ -1,6 +1,6 @@
-## What is this ?
+## What is this?
 This is my portfolio designed to look like mac os
-## Know about on me
+## Want to know about me?
 Click on the finder app in the dock to know more on me and my projects
 ## Send me a message
 Click on the mail app in the dock to send me a message

@@ -96,12 +96,14 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_apps_safari_safari_component__ = __webpack_require__("../../../../../src/app/components/apps/safari/safari.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_icon_icon_component__ = __webpack_require__("../../../../../src/app/components/icon/icon.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__components_apps_trash_trash_component__ = __webpack_require__("../../../../../src/app/components/apps/trash/trash.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__components_apps_finder_projects_projects_component__ = __webpack_require__("../../../../../src/app/components/apps/finder/projects/projects.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -138,7 +140,8 @@ AppModule = __decorate([
             __WEBPACK_IMPORTED_MODULE_14__components_apps_mail_mail_component__["a" /* MailComponent */],
             __WEBPACK_IMPORTED_MODULE_15__components_apps_safari_safari_component__["a" /* SafariComponent */],
             __WEBPACK_IMPORTED_MODULE_16__components_icon_icon_component__["a" /* IconComponent */],
-            __WEBPACK_IMPORTED_MODULE_17__components_apps_trash_trash_component__["a" /* TrashComponent */]
+            __WEBPACK_IMPORTED_MODULE_17__components_apps_trash_trash_component__["a" /* TrashComponent */],
+            __WEBPACK_IMPORTED_MODULE_18__components_apps_finder_projects_projects_component__["a" /* ProjectsComponent */]
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -161,7 +164,7 @@ AppModule = __decorate([
 /***/ "../../../../../src/app/components/apps/finder/finder.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  finder works!\n</p>\n"
+module.exports = "<div class=\"padding-10\">\n  <div class=\"ui grid\">\n      <div class=\"two wide column\">\n        <os-icon (dblClick)=\"router.navigate(['/finder', 'projects'])\" icon=\"assets/images/icons/git-folder-icon.png\" label=\"Projects\"></os-icon>\n      </div>\n  </div>   \n</div>\n"
 
 /***/ }),
 
@@ -189,6 +192,7 @@ module.exports = module.exports.toString();
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FinderComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -199,8 +203,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var FinderComponent = (function () {
-    function FinderComponent() {
+    function FinderComponent(router) {
+        this.router = router;
     }
     FinderComponent.prototype.ngOnInit = function () {
     };
@@ -212,10 +218,103 @@ FinderComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/apps/finder/finder.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/apps/finder/finder.component.scss")]
     }),
-    __metadata("design:paramtypes", [])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */]) === "function" && _a || Object])
 ], FinderComponent);
 
+var _a;
 //# sourceMappingURL=finder.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/apps/finder/projects/projects.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"padding-10\">\n  <div class=\"ui grid\">\n      <div *ngFor=\"let project of projects\" class=\"two wide column\">\n          <os-icon icon=\"assets/images/icons/docx-icon.png\" [label]=\"project.label\" (dblClick)=\"windowService.showWindow(project.label, [], 'fullscreen', 'markdown', project.md, false, false)\"></os-icon>\n      </div>\n  </div>   \n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/apps/finder/projects/projects.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/apps/finder/projects/projects.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProjectsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__projects__ = __webpack_require__("../../../../../src/app/components/apps/finder/projects/projects.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_window_window_service__ = __webpack_require__("../../../../../src/app/services/window/window.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ProjectsComponent = (function () {
+    function ProjectsComponent(windowService) {
+        this.windowService = windowService;
+    }
+    ProjectsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.projects = [];
+        Object.keys(__WEBPACK_IMPORTED_MODULE_1__projects__["a" /* PROJECTS */])
+            .forEach(function (project) {
+            _this.projects.push(__WEBPACK_IMPORTED_MODULE_1__projects__["a" /* PROJECTS */][project]);
+        });
+    };
+    return ProjectsComponent;
+}());
+ProjectsComponent = __decorate([
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["o" /* Component */])({
+        selector: 'os-projects',
+        template: __webpack_require__("../../../../../src/app/components/apps/finder/projects/projects.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/apps/finder/projects/projects.component.scss")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_window_window_service__["a" /* WindowService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_window_window_service__["a" /* WindowService */]) === "function" && _a || Object])
+], ProjectsComponent);
+
+var _a;
+//# sourceMappingURL=projects.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/apps/finder/projects/projects.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PROJECTS; });
+var PROJECTS = {
+    'letschat': {
+        label: 'Letschat',
+        md: 'assets/mds/projects/letschat.md'
+    },
+    'legacy': {
+        label: 'Legacy CMS',
+        md: 'assets/mds/projects/legacy.md'
+    }
+};
+//# sourceMappingURL=projects.js.map
 
 /***/ }),
 
@@ -698,7 +797,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".titlebar {\n  padding: 5px !important;\n  background: rgba(236, 240, 241, 0.8) !important;\n  border-top-right-radius: 5px !important;\n  border-top-left-radius: 5px !important;\n  border-bottom-right-radius: 0px !important;\n  border-bottom-left-radius: 0px !important; }\n  .titlebar .window-action-icon {\n    border-radius: 100%;\n    height: 12px;\n    width: 12px;\n    display: inline-block; }\n    .titlebar .window-action-icon .fa {\n      position: relative;\n      bottom: 4px;\n      left: 3px;\n      font-size: 9px;\n      color: #323232;\n      visibility: hidden; }\n  .titlebar .window-action:hover .fa {\n    visibility: visible; }\n  .titlebar .navigation .ui.segment {\n    padding-left: 10px !important;\n    padding-right: 10px !important;\n    padding-top: 4px !important;\n    padding-bottom: 4px !important; }\n    .titlebar .navigation .ui.segment .fa {\n      color: #95a5a6; }\n  .titlebar .search-bar {\n    height: 10px !important;\n    margin-top: 30px; }\n", ""]);
+exports.push([module.i, ".titlebar {\n  padding: 5px !important;\n  background: rgba(236, 240, 241, 0.8) !important;\n  border-top-right-radius: 5px !important;\n  border-top-left-radius: 5px !important;\n  border-bottom-right-radius: 0px !important;\n  border-bottom-left-radius: 0px !important; }\n  .titlebar .window-action-icon {\n    border-radius: 100%;\n    height: 12px;\n    width: 12px;\n    display: inline-block; }\n    .titlebar .window-action-icon .fa {\n      position: relative;\n      bottom: 2px;\n      left: 1.5px;\n      font-size: 9px;\n      color: #323232;\n      visibility: hidden; }\n  .titlebar .window-action:hover .fa {\n    visibility: visible; }\n  .titlebar .navigation .ui.segment {\n    padding-left: 10px !important;\n    padding-right: 10px !important;\n    padding-top: 4px !important;\n    padding-bottom: 4px !important; }\n    .titlebar .navigation .ui.segment .fa {\n      color: #95a5a6; }\n  .titlebar .search-bar {\n    height: 10px !important;\n    margin-top: 30px; }\n", ""]);
 
 // exports
 
@@ -913,9 +1012,12 @@ var APP_ROUTES = [
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FINDER_ROUTES; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_apps_finder_finder_component__ = __webpack_require__("../../../../../src/app/components/apps/finder/finder.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_apps_finder_projects_projects_component__ = __webpack_require__("../../../../../src/app/components/apps/finder/projects/projects.component.ts");
+
 
 var FINDER_ROUTES = [
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_0__components_apps_finder_finder_component__["a" /* FinderComponent */] }
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_0__components_apps_finder_finder_component__["a" /* FinderComponent */] },
+    { path: 'projects', component: __WEBPACK_IMPORTED_MODULE_1__components_apps_finder_projects_projects_component__["a" /* ProjectsComponent */] }
 ];
 //# sourceMappingURL=finder.route.js.map
 
