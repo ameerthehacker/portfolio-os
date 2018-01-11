@@ -81,3 +81,7 @@ ng serve
 ```
 
 6. Browse the URL __localhost:4200__ in the browser
+
+## License ##
+
+MIT © [Ameer Jhan](mailto:ameerjhanprof@gmail.com)
