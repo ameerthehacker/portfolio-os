@@ -141,4 +141,6 @@ php artisan serve
 
 10. Browse the URL __localhost:8000__ in the browser
 
+## License ##
 
+MIT © [Ameer Jhan](mailto:ameerjhanprof@gmail.com)
