@@ -19,6 +19,7 @@ import { MailComponent } from './components/apps/mail/mail.component';
 import { SafariComponent } from './components/apps/safari/safari.component';
 import { IconComponent } from './components/icon/icon.component';
 import { TrashComponent } from './components/apps/trash/trash.component';
+import { ProjectsComponent } from './components/apps/finder/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { TrashComponent } from './components/apps/trash/trash.component';
     MailComponent,
     SafariComponent,
     IconComponent,
-    TrashComponent
+    TrashComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
