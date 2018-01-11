@@ -18,5 +18,9 @@ export const PROJECTS = {
     'slambook': {
         label:'The Slambooks',
         md: 'assets/mds/projects/slambooks.md'
+    },
+    'icode': {
+        label: 'I{Code}',
+        md: 'assets/mds/projects/icode.md'
     }
 }
