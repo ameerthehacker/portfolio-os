@@ -4,6 +4,10 @@ Takes the entire slambook experience online where users can create
 
 ![screenshot](https://firebasestorage.googleapis.com/v0/b/portfolio-os-187bc.appspot.com/o/projects%2Fslambook%2Fhome_page.png?alt=media&token=a007b633-1a58-4b50-acf7-525d9a957867)
 
+# Github #
+
+Feel free to fork my git repo [here](https://github.com/ameerthehacker/SlamBook)
+
 # Demo #
 
 See the live running app [here](http://theslambooks.herokuapp.com/)
